@@ -1,0 +1,168 @@
+:root{
+  --corActive: linear-gradient(to bottom right, hsl(249, 99%, 64%) to hsl(278, 94%, 30%));
+  --corErro: hsl(0, 100%, 66%);
+--corBranca:  hsl(0, 0%, 100%);
+--corCinzaClaro: hsl(270, 3%, 87%);
+ --corCinzaEscruto: hsl(279, 6%, 55%);
+ --corVioleta: hsl(278, 68%, 11%);
+}
+
+.corVioleta{
+  color: var(--corVioleta);
+}
+.corActive{
+  color: var(--corActive);
+}
+.corErro{
+  color: var(--corErro);
+}
+.corBranca{
+  color: var(--corBranca);
+}
+.corCinzaClaro{
+  color: var(--corCinzaClaro);
+}
+.corCinzaEscuro{
+  color: var(--corCinzaEscuro);
+}
+
+*{
+  font-size: 18px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+body{
+  margin: 0px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(./images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+}
+span{
+  display: block;
+}
+section{
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  gap: 200px; 
+  max-width: 1000px;  
+}
+
+label{
+  color: var(--corVioleta);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+input{
+  font-size: 18px;
+  font-family: 'Space Grotesk', sans-serif;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid var(--corCinzaClaro);
+  box-sizing: border-box;
+  padding: 11px 16px;
+  margin-bottom: 5px;
+}
+input::placeholder{
+  color: var(--corCinzaClaro);
+}
+input:active{
+  border: 1px solid red;
+}
+
+.cartão-frente{
+  background-image: url('./images/bg-card-front.png');
+  padding: 32px;
+  background-repeat: round;
+  display: grid;
+  gap: 20px;
+  margin-bottom: 40px;
+  width: 447px;
+  height: 245px;
+  box-sizing: border-box;
+}
+
+.bolinhas{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.bolinha1::before{
+  content: '';
+  display: block;
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border-radius: 50%;
+}
+.bolinha2::before{
+  content: '';
+  display: block;
+  height: 21px;
+  width: 21px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.dadosCartao{
+  margin-top: 30px;
+  display: grid;
+  gap: 15px;
+}
+.nomeDataCartao{
+  display: flex;
+  justify-content: space-between;
+}
+.cartao-nome, .cartao-data{
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.cartao-numero{
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.dataExpira{
+  display: flex;
+  letter-spacing: 2px;
+  color: white;
+  align-items: center;
+}
+.mes, .ano{
+  font-size: 12px;
+}
+
+.cartão-verso{
+  background-image: url('./images/bg-card-back.png');
+  padding: 111px 90px 116px 358px;
+  background-repeat: round;
+  margin-left: 100px;
+  width: 447px;
+  height: 245px;
+  box-sizing: border-box;
+ }
+
+input[type="button"]{
+  margin-top: 20px;
+  background-color: var(--corVioleta);
+  color: white;
+  padding: 5px 15px;
+ }
+ input[type="button"]:hover{
+  background-color: hsl(249, 99%, 64%);
+  cursor: pointer;
+ }
+ .erro{
+  font-size: 12px;
+  margin-top: 5px;
+  color: var(--corErro);
+ }
+ input[type="number"]{
+  -moz-appearance: textfield;
+ }
